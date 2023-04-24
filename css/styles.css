@@ -116,10 +116,13 @@ body {
     height: 256px;
     border: 2px solid red;
     background-color: transparent;
-    animation: mymove 1s steps(16) infinite;
-    animation-play-state: paused; 
+    
    
     
+  }
+  .is-scrolling .image{
+    animation: mymove 1s steps(16) infinite;
+    animation-play-state: paused; 
   }
   @keyframes mymove {
     0%{
