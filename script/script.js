@@ -15,3 +15,7 @@ window.addEventListener('scroll', () => {
 window.addEventListener('load', () => {
   scrollDown.style.opacity = '1';
 });
+
+
+
+//SPRITESHEEET

@@ -16,11 +16,14 @@ body {
   }
   header {
     width: 100%;
-    height: 100%;
+    height: 96vh;
     background-image: url('../img/img_arriere_plan/Plandetravail1.png');
     background-size: cover;
     background-position: center;
     background-color: transparent;
+    border: 2px solid red;
+    margin:0;
+    padding:0;
   }
   h1 {
     font-family: 'Montserrat', sans-serif;
@@ -28,13 +31,98 @@ body {
   }
   
   .container {
-    height: 800px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:115px;
+    left:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    font-size: 2vw;
+    font-family: 'Raleway', sans-serif;
+    margin: auto;
+  }
+  .container p {
+    font-size: 11px;
+    max-width: 80%;
+  }
+  
+  
+  section {
+    height: 100vh;
+    width: 100vw;
+    border: 2px solid red;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
   }
-  
-  
-  
+  #chapitre-1{
+    background-image: url(../img/img_arriere_plan/Plandetravail1.png);
+    background-size: cover;
+    background-position: center;
+  }
+  #chapitre-2{
+    background-image: url(../img/img_arriere_plan/Plandetravail2.png);
+    background-size: cover;
+    background-position: center;
+  }
+  #chapitre-3{
+    background-image:url(../img/img_arriere_plan/Plandetravail3.png);
+    background-size: cover;
+    background-position: center;
+    
+  }
+  #chapitre-4{
+    background-image: url(../img/img_arriere_plan/Plandetravail4.png);
+    background-size: cover;
+    background-position: center;
+  }
+  #chapitre-5{
+    background-image: url(../img/img_arriere_plan/Plandetravail5.png);
+    background-size: cover;
+    background-position: center;
+  }
+  #chapitre-6{
+    background-image: url(../img/img_arriere_plan/Plandetravail6.png);
+    background-size: cover;
+    background-position: center;
+  }
+  #chapitre-7{
+    background-image: url(../img/img_arriere_plan/Plandetravail6.png);
+    background-size: cover;
+    background-position: center;
+  }
+  #chapitre-8{
+    background-image: url(../img/img_arriere_plan/Plandetravail8.png);
+    background-size: cover;
+    background-position: center;
+  }
+
+
+  .image {
+    background-image: url(../img/img_personnages/spritesheet_marche_katana-boy.png);
+    background-position: 0 0;
+    background-size: cover;
+    width: 256px;
+    height: 256px;
+    border: 2px solid red;
+    background-color: transparent;
+    animation: mymove 1s steps(16) infinite;
+    animation-play-state: paused;
+    
+  }
+  @keyframes mymove {
+    0%{
+      background-position-x: 0;
+    }
+    100%{
+      background-position-x:-4096px;
+    }
+  }
