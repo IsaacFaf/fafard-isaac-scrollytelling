@@ -13,6 +13,7 @@ body {
     font-weight: 400;
     background-color: var(--vert);
     overflow-x: hidden;
+    height: 2000px;
   }
   header {
     width: 100%;
@@ -45,6 +46,7 @@ body {
     font-size: 2vw;
     font-family: 'Raleway', sans-serif;
     margin: auto;
+    
   }
   .container p {
     font-size: 11px;
@@ -115,7 +117,8 @@ body {
     border: 2px solid red;
     background-color: transparent;
     animation: mymove 1s steps(16) infinite;
-    animation-play-state: paused;
+    animation-play-state: paused; 
+   
     
   }
   @keyframes mymove {
@@ -124,5 +127,37 @@ body {
     }
     100%{
       background-position-x:-4096px;
+    }
+  }
+  body.is-scrolling{
+    animation-play-state:running;
+  }
+
+
+
+  @keyframes katana {
+    0%{
+      background-position-x: 0;
+    }
+    100%{
+      background-position-x:-5100px;
+    }
+  }
+  @keyframes katanaBoy {
+    0%{
+      background-position-x: 0;
+    }
+    100%{
+      background-position-x:-7936px;
+    }
+  }
+  
+
+  @keyframes fantome {
+    0%{
+      background-position-x: 0;
+    }
+    100%{
+      background-position-x:-7936px;
     }
   }

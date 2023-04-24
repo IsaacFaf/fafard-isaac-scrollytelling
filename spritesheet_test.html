@@ -6,13 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="script/script.js"></script>
+    <style>
+
+
+
+
+        .SpriteSheet2{
+    background-image: url(../img/img_personnages/spritesheet_meditation_katana.png);
+    background-position: 0 0;
+    background-size: cover;
+    width: 256px;
+    height: 256px;
+    border: 2px solid red;
+    background-color: transparent;
+    animation: katana 1s steps(20) infinite;
+    animation-play-state: paused; 
+   
+    /* Ne PAS oublier le JS animation-play-state du JS aussi (Seulement faite pour balise IMAGE)*/
+  }
+ 
+  .SpriteSheet3{
+    background-image: url(../img/img_personnages/spritesheetmeditation_katana-boy.png);
+    background-position: 0 0;
+    background-size: cover;
+    width: 256px;
+    height: 256px;
+    border: 2px solid red;
+    background-color: transparent;
+    animation: katanaBoy 1s steps(31) infinite;
+    animation-play-state: paused; 
+   
+    /* Ne PAS oublier le JS animation-play-state du JS aussi (Seulement faite pour balise IMAGE)*/
+  }
+
+
+  .SpriteSheet4{
+    background-image: url(../img/img_personnages/spritesheettue_fantome.png);
+    background-position: 0 0;
+    background-size: cover;
+    width: 256px;
+    height: 256px;
+    border: 2px solid red;
+    background-color: transparent;
+    animation: fantome 1s steps(31) infinite;
+    animation-play-state: paused; 
+   
+    /* Ne PAS oublier le JS animation-play-state du JS aussi (Seulement faite pour balise IMAGE)*/
+  }
+  
+    </style>
+
+
+
+
+
+
 </head>
+
 <body class="is-scrolling">
+<div class="container"><div class="parent">
     <div class="image"></div>
+    <div class="SpriteSheet2"></div>
+    <div class="SpriteSheet3"></div>
+    <div class="SpriteSheet4"></div>
+</div></div>
     <section>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequatur quidem quaerat molestias sint quis itaque debitis sapiente dicta odit ea, dolores fugiat porro hic non mollitia ab alias ullam!</p>
     </section>
-    
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="script/script.js"></script>
 </body>
 </html>
