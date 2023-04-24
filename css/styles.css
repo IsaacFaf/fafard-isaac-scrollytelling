@@ -1,0 +1,40 @@
+:root {
+    --noir: #000000;
+    --vertfonce: #012e24;
+    --vert: #80de52;
+    --vertpale: #83f98e;
+    --bleu: #258ea3;
+  }
+
+
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    background-color: var(--vert);
+    overflow-x: hidden;
+  }
+  header {
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/img_arriere_plan/Plandetravail1.png');
+    background-size: cover;
+    background-position: center;
+    background-color: transparent;
+  }
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+  
+  .container {
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  
+  
