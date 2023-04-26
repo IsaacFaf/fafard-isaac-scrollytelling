@@ -17,9 +17,30 @@ window.addEventListener('load', () => {
 });
 
 
+let body = document.querySelector('body')
+//SPRITESHEET
+//Prise 4
+let sprite = document.querySelector('.image');
+let scroll = document.querySelector('.is-scrolling');//
 
-//SPRITESHEEET
-function sprites(){
+window.addEventListener("scroll", function(){
+ body.classList.add('.is-scrolling');
+ sprite.style.animationPlayState = 'running';
+  let time = setTimeout(function(){
+    body.classList.remove('.is-scrolling');
+    sprite.style.animationPlayState = 'paused';
+  }, 100);
+})
+
+
+
+
+
+
+
+//Prise 1
+
+/*function sprites(){
   var sprite = document.querySelector('.image')
   for (var i = 0; i < sprite.length;i++){
     var windowHeight = window.innerHeight;
@@ -33,8 +54,11 @@ function sprites(){
       sprite.style.animationPlayState = 'paused';
     }
   }}
-  window.addEventListener("scroll". sprites)
-/*let isScrolling; //Déclaration pour le setTimeout
+  window.addEventListener("scroll", sprites)*/
+
+//Prise 2
+/*
+let isScrolling; //Déclaration pour le setTimeout
 window.addEventListener('scroll', function() {
   
   let sprite = document.querySelector(".image");
@@ -45,8 +69,8 @@ window.addEventListener('scroll', function() {
   if (spritePos <= scrollPos){
     
     sprite.style.animationPlayState = 'running';
-    body.classList.add('is-scrolling');
-    console.log("Je scroll")
+    body.classList.add('.is-scrolling');
+    console.log("Je scroll");
   } else{
     
     sprite.style.animationPlayState = 'paused';
@@ -64,7 +88,7 @@ window.addEventListener('scroll', function() {
 
 
 
-
+//Prise 3
 /*
 const img = document.querySelector('.image');
 let timeL = gsap.timeline({
