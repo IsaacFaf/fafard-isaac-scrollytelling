@@ -19,11 +19,25 @@ window.addEventListener('load', () => {
 
 
 //SPRITESHEEET
-
-let isScrolling; //Déclaration pour le setTimeout
+function sprites(){
+  var sprite = document.querySelector('.image')
+  for (var i = 0; i < sprite.length;i++){
+    var windowHeight = window.innerHeight;
+    var elementTop=sprite[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+    if(elementTop < windowHeight - elementVisible){
+      sprite[i].classList.add("is-scrolling");
+      sprite.style.animationPlayState = 'running';
+    } else {
+      sprite[i].classList.remove("is-scrolling");
+      sprite.style.animationPlayState = 'paused';
+    }
+  }}
+  window.addEventListener("scroll". sprites)
+/*let isScrolling; //Déclaration pour le setTimeout
 window.addEventListener('scroll', function() {
-  let sprite = document.querySelector('.image');
   
+  let sprite = document.querySelector(".image");
   let spritePos = sprite.getBoundingClientRect().top;
   let scrollPos = window.innerHeight;
   
@@ -33,7 +47,7 @@ window.addEventListener('scroll', function() {
     sprite.style.animationPlayState = 'running';
     body.classList.add('is-scrolling');
     console.log("Je scroll")
-  } else {
+  } else{
     
     sprite.style.animationPlayState = 'paused';
     body.classList.remove('is-scrolling')
@@ -46,10 +60,13 @@ window.addEventListener('scroll', function() {
     minuteur = "Valeur de ma variable";
     console.log(minuteur);
   }, 100);
-}, false);
+}, false);*/
 
 
-/*const img = document.querySelector('.image');
+
+
+/*
+const img = document.querySelector('.image');
 let timeL = gsap.timeline({
   scrollTrigger:{
     trigger:Image,
