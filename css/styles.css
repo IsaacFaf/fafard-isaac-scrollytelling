@@ -55,10 +55,9 @@ body {
   
   
   section {
-    height: 100vh;
-    width: 100vw;
+    
     border: 2px solid red;
-    margin-top: 100px;
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,55 +65,81 @@ body {
     text-align: center;
   }
   #chapitre-1{
+    position: relative;
     background-image: url(../img/img_arriere_plan/Plandetravail1.png);
     background-size: cover;
     background-position: center;
+    width: 100%;
+  height: 100vh;
   }
   #chapitre-2{
+    position: relative;
     background-image: url(../img/img_arriere_plan/Plandetravail2.png);
     background-size: cover;
     background-position: center;
+    width: 100%;
+  height: 100vh;
   }
   #chapitre-3{
+    position: relative;
     background-image:url(../img/img_arriere_plan/Plandetravail3.png);
     background-size: cover;
     background-position: center;
+    width: 100%;
+  height: 100vh;
     
   }
   #chapitre-4{
+    position: relative;
     background-image: url(../img/img_arriere_plan/Plandetravail4.png);
     background-size: cover;
     background-position: center;
+    width: 100%;
+  height: 100vh;
   }
   #chapitre-5{
+    position: relative;
     background-image: url(../img/img_arriere_plan/Plandetravail5.png);
     background-size: cover;
     background-position: center;
+    width: 100%;
+  height: 100vh;
   }
   #chapitre-6{
+    position: relative;
     background-image: url(../img/img_arriere_plan/Plandetravail6.png);
     background-size: cover;
     background-position: center;
+    width: 100%;
+  height: 100vh;
   }
   #chapitre-7{
+    position: relative;
     background-image: url(../img/img_arriere_plan/Plandetravail6.png);
     background-size: cover;
     background-position: center;
+    width: 100%;
+  height: 100vh;
   }
   #chapitre-8{
+    position: relative;
     background-image: url(../img/img_arriere_plan/Plandetravail8.png);
     background-size: cover;
     background-position: center;
+    width: 100%;
+  height: 100vh;
   }
 
 
   .image {
+    position: absolute;
+    top: 50vh;
+    left: 0.5vw;
     background-image: url(../img/img_personnages/spritesheet_marche_katana-boy.png);
     background-position: 0 0;
     background-size: cover;
     width: 256px;
     height: 256px;
-    border: 2px solid red;
     background-color: transparent;
     animation: mymove 1s steps(16) infinite;
     animation-play-state: paused; 
