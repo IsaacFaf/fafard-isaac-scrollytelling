@@ -1,21 +1,3 @@
-const scrollDown = document.querySelector('.scroll-down');
-const height = window.innerHeight;
-let lastScrollPos = 0;
-
-window.addEventListener('scroll', () => {
-  const currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
-  if (currentScrollPos > lastScrollPos && currentScrollPos > height) {
-    scrollDown.classList.add('hidden');
-  } else {
-    scrollDown.classList.remove('hidden');
-  }
-  lastScrollPos = currentScrollPos;
-});
-
-window.addEventListener('load', () => {
-  scrollDown.style.opacity = '1';
-});
-
 
 let body = document.querySelector('body')
 //SPRITESHEET
@@ -32,7 +14,15 @@ window.addEventListener("scroll", function(){
   }, 100);
 })
 
-
+let spriteDeux = document.querySelector('#chapitre-4 div.a');
+window.addEventListener("scroll", function(){
+  body.classList.add('.is-scrolling');
+  spriteDeux.style.animationPlayState = 'running';
+   let time = setTimeout(function(){
+     body.classList.remove('.is-scrolling');
+     spriteDeux.style.animationPlayState = 'paused';
+   }, 100);
+ })
 
 
 
@@ -118,6 +108,35 @@ timeL.to('.image', {backgroundPositionX:'-4096', duration:0.2, repeat:-1})
 
 //INSTRUCTION 4 - Animation de base de quelques images
 
+
+//header
+let defilement = document.querySelector('.defile');
+let detect = document.querySelector('header span');
+
+
+//variable de controle
+
+//
+console.log(detect)
+window.addEventListener("scroll", function(){
+  detect.classList.remove('defile');
+  if (defilement != null) {
+    detect.classList.add("ChangeOpa")
+    gsap.to(detect, {opacity: 0, duration: 0.1, repeat:-1});
+ }
+});
+
+if (defilement == null){
+  detect.classList.add("ChangeOpa")
+}
+else{
+  gsap.fromTo(defilement, {scaleY: "100%", scaleX: "100%", opacity:"100%" }, { 
+      scaleY: "51%", scaleX: "51%", duration:1.8, repeat:-1,yoyo:true, opacity:"65%"
+  });
+}
+
+
+
 let swirdArr = document.querySelectorAll("#chapitre-2 img");
 
 //Chap2
@@ -145,3 +164,7 @@ gsap.timeline().fromTo('#chapitre-6 div.a', {x:'-15vw', y:"-120px",opacity:"0%",
 .to('#chapitre-6 div.a', { x: '17.42vw', y:"213px", rotate:"60deg", duration: 0.8,ease:'none'})
 .to('#chapitre-6 div.a', { x: '17.42vw', y:"163px", rotate:"60deg", duration: 1, opacity:"1%"})
 //Chap7
+let TueurDeFantome = document.querySelector('#chapitre-7 div.a')
+console.log(TueurDeFantome);
+gsap.fromTo(TueurDeFantome, {y: "-30vh"}, {y: "0vh", duration: 2});
+

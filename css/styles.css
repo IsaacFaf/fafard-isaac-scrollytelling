@@ -14,21 +14,49 @@ body {
     background-color: var(--vert);
     overflow-x: hidden;
     height: 2000px;
+    margin:0;
   }
   header {
     width: 100%;
     height: 96vh;
-    background-image: url('../img/img_arriere_plan/Plandetravail1.png');
+    background-image: url(../img/img_arriere_plan/LibreDeDroit.webp);
     background-size: cover;
     background-position: center;
+    width: 100%;
+    height: 100vh;
     background-color: transparent;
-    border: 2px solid red;
     margin:0;
     padding:0;
   }
+  header p{
+    position: absolute;
+    left: center;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    top: 90vh;
+left: 50%;
+transform: translate(-50%, -50%);
+color: var(--vertpale);
+    
+  }
+  header span{
+    position: absolute;
+    
+    text-align: center;
+    font-weight: bolder;
+    top: 60%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+  }
   h1 {
+    position: absolute;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin:0;
   }
   
   .container {
@@ -57,7 +85,7 @@ body {
   section {
     position: relative;
     
-    margin-top: 115px;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,12 +94,18 @@ body {
   }
   #chapitre-1{
     position: relative;
-    border:2px red solid;
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 100vh;
     background-image: url(../img/img_arriere_plan/Plandetravail1.png);
+  }
+  #chapitre-1 p{
+    position: absolute;
+    font-size: 16.5px;
+    top: -15vh;
+    color: var(--noir);
+    font-weight: bold;
   }
 
   #chapitre-2{
@@ -81,6 +115,13 @@ body {
     background-position: center;
     width: 100%;
     height: 100vh;
+  }
+  #chapitre-2 p{
+    position: absolute;
+    font-size: 16.5px;
+    top: -15vh;
+    color: white;
+    font-weight: bold;
   }
   #chapitre-2 img.a{
     position: absolute;
@@ -131,6 +172,13 @@ body {
     height: 100vh;
     
   }
+  #chapitre-3 p{
+    position: absolute;
+    font-size: 16.5px;
+    top: 0vh;
+    color: white;
+    font-weight: bold;
+  }
   #chapitre-3 img.a{
     position: absolute;
     display: block;
@@ -148,9 +196,16 @@ body {
     width: 100%;
     height: 100vh;
   }
+  #chapitre-4 p{
+    position: absolute;
+    font-size: 16.5px;
+    top: 0vh;
+    color: var(--noir);
+    font-weight: bold;
+  }
   #chapitre-4 div.a{
     position: absolute;
-    top: 330px;
+    top: 390px;
     left: 35vw;
     background-image: url(../img/img_personnages/spritesheetmeditation_katana-boy.png);
     background-position: 0 0;
@@ -184,6 +239,13 @@ body {
     opacity: 95%;
     
   }
+  #chapitre-5 p{
+    position: absolute;
+    font-size: 16.5px;
+    top: 0vh;
+    color: white;
+    font-weight: bold;
+  }
   #chapitre-5 .mask{
     position: absolute;
     background: white;
@@ -209,6 +271,13 @@ body {
     width: 100%;
     height: 100vh;
   }
+  #chapitre-6 p{
+    position: absolute;
+    font-size: 16.5px;
+    top: 0vh;
+    color: white;
+    font-weight: bold;
+  }
   #chapitre-6 div.a{
     position: absolute;
     top: 100px;
@@ -229,20 +298,48 @@ body {
     width: 100%;
     height: 100vh;
   }
+  #chapitre-7 p{
+    position: absolute;
+    font-size: 16.5px;
+    top: 0vh;
+    color: white;
+    font-weight: bold;
+  }
+  #chapitre-7 div.fantome{
+    position: absolute;
+    background-image: url(../img/img_personnages/fantome.png);
+    background-size: cover;
+    background-position: center;
+    width: 64px;
+    height: 49px;
+    top: 430px;
+    left: 51.5%;
+  }
   #chapitre-7 div.a{
-    
+    position: absolute;
       background-image: url(../img/img_personnages/spritesheettue_fantome.png);
       background-position: 0 0;
       background-size: cover;
       width: 256px;
       height: 256px;
-      border: 2px solid red;
+      
       background-color: transparent;
       animation: action 1s steps(30) infinite;
       animation-play-state: running; 
-     
+     left: 47%;
+     rotate: 85deg;
       
     }
+
+@keyframes action{
+  0%{
+    background-position-x: 0;
+  }
+  100%{
+    background-position-x:-7680px;
+  }
+}
+
   #chapitre-8{
     position: relative;
     background-image: url(../img/img_arriere_plan/Plandetravail8.png);
@@ -251,6 +348,7 @@ body {
     width: 100%;
     height: 100vh;
     color: white;
+    font-size: 125px;
   }
 
 
@@ -278,11 +376,11 @@ body {
   @keyframes mymove {
     0%{
       transform: scale(-110vw);
-      transform:translateX(-10vw) ;
+      transform:translateX(-1vw) ;
       background-position-x: 0;
     }
     100%{
-      transform: translateX(60vw);
+      transform: translateX(80vw);
       background-position-x:-2048px;
     }
   }
@@ -291,7 +389,7 @@ body {
   }
 
 
-
+/* pour le html test spritesheed
   @keyframes katana {
     0%{
       background-position-x: 0;
@@ -317,4 +415,4 @@ body {
     100%{
       background-position-x:-7936px;
     }
-  }
+  }*/
