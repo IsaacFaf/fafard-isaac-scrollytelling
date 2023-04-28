@@ -144,3 +144,4 @@ gsap.timeline().fromTo('#chapitre-6 div.a', {x:'-15vw', y:"-120px",opacity:"0%",
 .to('#chapitre-6 div.a', { x: '15.8vw', y:"188px", rotate:"58deg", duration: 0.82,ease:'none',})
 .to('#chapitre-6 div.a', { x: '17.42vw', y:"213px", rotate:"60deg", duration: 0.8,ease:'none'})
 .to('#chapitre-6 div.a', { x: '17.42vw', y:"163px", rotate:"60deg", duration: 1, opacity:"1%"})
+//Chap7

@@ -229,6 +229,20 @@ body {
     width: 100%;
     height: 100vh;
   }
+  #chapitre-7 div.a{
+    
+      background-image: url(../img/img_personnages/spritesheettue_fantome.png);
+      background-position: 0 0;
+      background-size: cover;
+      width: 256px;
+      height: 256px;
+      border: 2px solid red;
+      background-color: transparent;
+      animation: action 1s steps(30) infinite;
+      animation-play-state: running; 
+     
+      
+    }
   #chapitre-8{
     position: relative;
     background-image: url(../img/img_arriere_plan/Plandetravail8.png);
