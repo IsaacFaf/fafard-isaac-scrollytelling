@@ -26,8 +26,6 @@ window.addEventListener("scroll", function(){
 
 
 
-
-
 //Prise 1
 
 /*function sprites(){
