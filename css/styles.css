@@ -55,7 +55,7 @@ body {
   
   
   section {
-    
+    position: relative;
     
     margin-top: 115px;
     display: flex;
@@ -90,6 +90,7 @@ body {
     rotate: -15deg;  
     left:34vw;  
     max-width: 115px;
+    top: 15%;
     
     
     
@@ -103,6 +104,7 @@ body {
   rotate: 12deg;
   left: 55vw;
   max-width: 115px;
+  top: 21px;
   
   /* GSAP en margin ici */
 }
@@ -113,9 +115,11 @@ body {
   width: 4.75vw;
   rotate: 1deg;
   max-width: 115px;
+  top: -20%;
   
   /* GSAP en margin ici */
 }
+
 
 
   #chapitre-3{
@@ -127,6 +131,15 @@ body {
     height: 100vh;
     
   }
+  #chapitre-3 img.a{
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    width: 30px;
+    rotate: -15deg;  
+    left:45vw;  
+    max-width: 115px;
+  }
   #chapitre-4{
     position: relative;
     background-image: url(../img/img_arriere_plan/Plandetravail4.png);
@@ -135,6 +148,30 @@ body {
     width: 100%;
     height: 100vh;
   }
+  #chapitre-4 div.a{
+    position: absolute;
+    top: 330px;
+    left: 35vw;
+    background-image: url(../img/img_personnages/spritesheetmeditation_katana-boy.png);
+    background-position: 0 0;
+    background-size: cover;
+    width: 256px;
+    height: 256px;
+    
+    background-color: transparent;
+    animation: mamv 2.6s steps(30) infinite;
+  }
+  
+  @keyframes mamv {
+    0%{
+      
+      background-position-x: 0;
+    }
+    100%{
+      
+      background-position-x:-7680px;
+    }
+  }
   #chapitre-5{
     position: relative;
     background-image: url(../img/img_arriere_plan/Plandetravail5.png);
@@ -142,6 +179,27 @@ body {
     background-position: center;
     width: 100%;
     height: 100vh;
+    color: white;
+    z-index: 0;
+    opacity: 95%;
+    
+  }
+  #chapitre-5 .mask{
+    position: absolute;
+    background: white;
+    border: red 10px;
+    width: 92.5vw;
+    height: 100vh;
+    opacity: 6.5%;
+  }
+  #chapitre-5 img.a{
+    width: 50vw;
+    z-index: 1;
+    height: 50vh;
+    
+    border-radius: 100%;
+    opacity: 10;
+    
   }
   #chapitre-6{
     position: relative;
@@ -150,6 +208,18 @@ body {
     background-position: center;
     width: 100%;
     height: 100vh;
+  }
+  #chapitre-6 div.a{
+    position: absolute;
+    top: 100px;
+    left: 45%;
+    background-image: url(../img/img_personnages/spritesheettue_fantome.png);
+    background-position: 0 0;
+    background-size: cover;
+    width: 256px;
+    height: 256px;
+    background-color: transparent;
+    animation: mamv 2.6s steps(30) infinite;
   }
   #chapitre-7{
     position: relative;
@@ -166,36 +236,40 @@ body {
     background-position: center;
     width: 100%;
     height: 100vh;
+    color: white;
   }
 
 
-  .image {
+  #chapitre-1 .image {
     position: absolute;
     top: 50vh;
     left: 0.5vw;
     background-image: url(../img/img_personnages/spritesheet_marche_katana-boy.png);
     background-position: 0 0;
     background-size: cover;
-    width: 256px;
-    height: 256px;
+    width: 128px;
+    height: 128px;
     background-color: transparent;
     
-    animation: mymove 1s steps(16) infinite;
+    animation: mymove 2.6s steps(16) infinite;
     animation-play-state: paused;
   }
   .is-scrolling .image{
     
     
-    animation: mymove 1s steps(16) infinite;
+    
     animation-play-state: running;
     
   }
   @keyframes mymove {
     0%{
+      transform: scale(-110vw);
+      transform:translateX(-10vw) ;
       background-position-x: 0;
     }
     100%{
-      background-position-x:-4096px;
+      transform: translateX(60vw);
+      background-position-x:-2048px;
     }
   }
   body.is-scrolling{
