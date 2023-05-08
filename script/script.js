@@ -6,7 +6,7 @@ let body = document.querySelector('body')
 let sprite = document.querySelector('.image');
 let scroll = document.querySelector('.is-scrolling');//
 
-window.addEventListener("scroll", function(){
+/*let Anim = window.addEventListener("scroll", function(){
  body.classList.add('.is-scrolling');
  sprite.style.animationPlayState = 'running';
   let time = setTimeout(function(){
@@ -14,6 +14,35 @@ window.addEventListener("scroll", function(){
     sprite.style.animationPlayState = 'paused';
   }, 100);
 })
+
+
+gsap.to(".image", {
+  ScrollTrigger: {
+    trigger:".image",
+    start:"top top",
+    end:"bottom bottom",
+    scrub:true,
+    
+    markers:true,
+    onUpdate: (e) => {
+      Anim.play()
+    }
+  }
+})*/
+
+
+/*const AnimTriggerred = ScrollTrigger.create({
+  trigger:".image",
+  start:"top top",
+  end:"bottom bottom",
+  scrub:true,
+  animation: Anim,
+  markers:true,
+  
+})*/
+
+
+
 
 let spriteDeux = document.querySelector('#chapitre-4 div.a');
 window.addEventListener("scroll", function(){
@@ -136,6 +165,10 @@ else{
 
 
 
+
+
+
+
 let swirdArr = document.querySelectorAll("#chapitre-2 img");
 
 //Chap2
@@ -144,15 +177,15 @@ const AnimA = gsap.fromTo(swirdArr, {scaleY: "1%", scaleX: "1%"}, {
 });
 
  // Désactive le trigger du chapitre 3 au départ
+//CHAPTER1
+
+let Anim = gsap.to(".image", {x:"90vw", y:"1vh"}, {
+  x:"1vw", y:"1vh", duration:5.2,
+})
 
 
 
 
-
-
-let AnimB;
-
-let AmimC;
 
 
 
@@ -186,6 +219,11 @@ gsap.fromTo(TueurDeFantome, {y: "-30vh"}, {y: "0vh", duration: 2});
 
 
 //SCROLLTRIGGER 2.3A
+
+
+let AnimB;
+
+let AmimC;
 const AnimTrigger = ScrollTrigger.create({
   trigger: "#chapitre-2", // élément déclencheur
   start: "100% -50%", // point de départ de l'animation
@@ -206,12 +244,27 @@ const chap5 = document.querySelector('#chapitre-5');
 const chap6 = document.querySelector('#chapitre-6');
 const chap7 = document.querySelector('#chapitre-7');
 const PinTriggerA = ScrollTrigger.create({
-  trigger:'#chapitre-1',
+  trigger:chap1,
   start: "top top",
-  end: () => `+=${chap2.offsetHeight}`, // Fin de l'épinglage = fin du contenu
+  end: () => `+=${chap2.offsetHeight}`,
   pin: true,
   pinSpacing: true,
-  markers: true
+  markers: true,
+  scrub:1.2,
+  
+  onUpdate: (e) => {
+    window.addEventListener("scroll", function(){
+      body.classList.add('.is-scrolling');
+      sprite.style.animationPlayState = 'running';
+       let time = setTimeout(function(){
+         body.classList.remove('.is-scrolling');
+         sprite.style.animationPlayState = 'paused';
+       }, 100);
+     })
+  },
+  animation:Anim,
+  animationDirection:"reverse"
+  
 })
 const PinTriggerB = ScrollTrigger.create({
   trigger: '#chapitre-2',

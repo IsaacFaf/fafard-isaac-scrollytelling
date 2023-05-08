@@ -386,11 +386,11 @@ top: -20%;
 @keyframes mymove {
   0%{
     transform: scale(-110vw);
-    transform:translateX(-1vw) ;
+    
     background-position-x: 0;
   }
   100%{
-    transform: translateX(80vw);
+    
     background-position-x:-2048px;
   }
 }
