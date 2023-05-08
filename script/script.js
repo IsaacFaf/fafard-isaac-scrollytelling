@@ -1,6 +1,6 @@
 
 gsap.registerPlugin(DrawSVGPlugin);
-
+gsap.registerPlugin(MotionPathPlugin);
 
 let body = document.querySelector('body')
 //SPRITESHEET
@@ -197,10 +197,28 @@ let swordAnim = gsap.timeline().fromTo('#chapitre-5 img.a',{x:'0%', y:"0%"}, 
 
 
 
-
+//let JumpAnim = gsap.timeline().fromTo('#chapitre-6 div.a', {x:'-15vw', y:"-120px",opacity:"0%",ease:'none', duration:0.8},
+//{x: '24.42vw', y:"38vh", rotate:"90deg", duration: 11, opacity:"100%"})
 //Chap6
-let JumpAnim = gsap.timeline().fromTo('#chapitre-6 div.a', {x:'-15vw', y:"-120px",opacity:"0%",ease:'none', duration:0.8},
-{x: '24.42vw', y:"38vh", rotate:"90deg", duration: 11, opacity:"100%"})
+let JumpAnim = gsap.to("#chapitre-6 div.a", {
+  motionPath:{
+    align:"#ligneSvg",
+    path:"#ligneSvg",
+    autoRotate:true,
+    alignOrigin:[0.5, 0.5]
+  },
+  scrollTrigger:{
+    scrub:true,
+    markers:true,
+    start: "0% 0%",
+    end:"100% 100%",
+    trigger:"#chapitre-6 div.a",
+    
+  }
+});
+
+
+
 /*.to('#chapitre-6 div.a', { x: '-2vw', y:"-10px", rotate:"30deg", duration: 0.95,ease:'none'})
 .to('#chapitre-6 div.a', { x: '5.5vw', y:"55px", rotate:"45deg", duration: 0.88,ease:'none'})
 .to('#chapitre-6 div.a', { x: '10.8vw', y:"108px", rotate:"52deg", duration: 0.86,ease:'none'})
@@ -341,4 +359,5 @@ const PinTriggerDpart = ScrollTrigger.create({
   animation: animSvg,
   scrub:true,
 });
+
 
