@@ -322,8 +322,8 @@ top: -20%;
   background-position: center;
   width: 64px;
   height: 49px;
-  top: 55%;
-  left: 50.5%;
+  top: 55vh;
+  left: 50vw;
 }
 #chapitre-7 div.a{
   position: absolute;
@@ -333,11 +333,12 @@ top: -20%;
     width: 256px;
     height: 256px;
     
+    
     background-color: transparent;
     animation: action 1s steps(30) infinite;
     animation-play-state: running; 
    left: 47%;
-   rotate: 85deg;
+
     
   }
 
@@ -364,8 +365,8 @@ top: -20%;
 
 #chapitre-1 .image {
   position: absolute;
-  top: 50vh;
-  left: 0.5vw;
+  top: 65vh;
+  left: -5.5vw;
   background-image: url(../img/img_personnages/spritesheet_marche_katana-boy.png);
   background-position: 0 0;
   background-size: cover;
@@ -376,6 +377,47 @@ top: -20%;
   animation: mymove 2.6s steps(16) infinite;
   animation-play-state: paused;
 }
+#chapitre-4 .nuageA{
+  position: absolute;
+  background-image: url(../img/img_elements_visuels/nuage.png);;
+  background-position: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 16.5vw;
+  height: 16.5vh;
+  top: 10vh;
+  left: 5vw;
+}
+
+#chapitre-4 .nuageB{
+  position: absolute;
+  background-image: url(../img/img_elements_visuels/nuage.png);;
+  background-position: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 24.5vw;
+  height: 24.5vh;
+  top: 30vh;
+  left: 48vw;
+}
+#chapitre-4 .nuageC{
+  position: absolute;
+  background-image: url(../img/img_elements_visuels/nuage.png);;
+  background-position: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 26.5vw;
+  height: 26.5vh;
+  top: 81.5vh;
+  left: 25vw;
+}
+
+
+
+
 .is-scrolling .image{
   
   

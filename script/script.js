@@ -176,43 +176,40 @@ const AnimA = gsap.fromTo(swirdArr, {scaleY: "1%", scaleX: "1%"}, {
   scaleY: "150%", scaleX: "150%", duration:5.2, yoyo:true,
 });
 
- // Désactive le trigger du chapitre 3 au départ
 //CHAPTER1
 
-let Anim = gsap.to(".image", {x:"90vw", y:"1vh"}, {
-  x:"1vw", y:"1vh", duration:5.2,
+let Anim = gsap.to(".image", {x:"98vw", y:"1vh", scaleX: "1000%", scaleY:"1000%"}, {
+  x:"5vw", y:"10vh", duration:5.2, scaleY:"150%", scaleX:"150%"
 })
 
 
-
-
-
+let animCloudArr = document.querySelectorAll("#chapitre-4 #cloud")
+const AnimCloud= gsap.fromTo(animCloudArr, {x:"0vw", y:"0vh"}, {
+  x:"80vw", y:"0vh", duration:5
+})
 
 
 //Chap5
-gsap.timeline().fromTo('#chapitre-5 img.a',{x:'0%', y:"0%"}, 
-{x: '35vw', y:"20vh",rotate:"6deg", duration: 2})
-.to('#chapitre-5 img.a', { x: '-35vw', y:"20vh", rotate:"30deg", duration: 2})
-.to('#chapitre-5 img.a', { x: '35vw', y:"-20vh", rotate:"-375deg", duration: 2})
-.to('#chapitre-5 img.a', { x: '-35vw', y:"-20vh", rotate:"5deg", duration: 2})
-.to('#chapitre-5 img.a', { x: '0vw', y:"-25vh", rotate:"25deg",duration:2})
-.to('#chapitre-5 img.a', { x: '0vw', y:"0vw", rotate:"0deg", duration: 2})
-.to('#chapitre-5 img.a', { scaleX:'150%', scaleY:'150%',rotate:"360deg", duration: 2, repeat:-1})
+let swordAnim = gsap.timeline().fromTo('#chapitre-5 img.a',{x:'0%', y:"0%"}, 
+{x: '5vw', y:"0vh",rotate:"380deg", duration: 2})
+
+
 
 
 //Chap6
-gsap.timeline().fromTo('#chapitre-6 div.a', {x:'-15vw', y:"-120px",opacity:"0%",ease:'none', duration:0.8},
-{x: '-9vw', y:"-58px",rotate:"6deg",opacity:"100%", duration: 1.1, ease:'none'})
-.to('#chapitre-6 div.a', { x: '-2vw', y:"-10px", rotate:"30deg", duration: 0.95,ease:'none'})
+let JumpAnim = gsap.timeline().fromTo('#chapitre-6 div.a', {x:'-15vw', y:"-120px",opacity:"0%",ease:'none', duration:0.8},
+{x: '24.42vw', y:"38vh", rotate:"90deg", duration: 11, opacity:"100%"})
+/*.to('#chapitre-6 div.a', { x: '-2vw', y:"-10px", rotate:"30deg", duration: 0.95,ease:'none'})
 .to('#chapitre-6 div.a', { x: '5.5vw', y:"55px", rotate:"45deg", duration: 0.88,ease:'none'})
 .to('#chapitre-6 div.a', { x: '10.8vw', y:"108px", rotate:"52deg", duration: 0.86,ease:'none'})
 .to('#chapitre-6 div.a', { x: '15.8vw', y:"188px", rotate:"58deg", duration: 0.82,ease:'none',})
 .to('#chapitre-6 div.a', { x: '17.42vw', y:"213px", rotate:"60deg", duration: 0.8,ease:'none'})
-.to('#chapitre-6 div.a', { x: '17.42vw', y:"163px", rotate:"60deg", duration: 1, opacity:"1%"})
+.to('#chapitre-6 div.a', { x: '17.42vw', y:"163px", rotate:"60deg", duration: 1, opacity:"1%"})*/
 //Chap7
 let TueurDeFantome = document.querySelector('#chapitre-7 div.a')
 console.log(TueurDeFantome);
-gsap.fromTo(TueurDeFantome, {y: "-30vh"}, {y: "0vh", duration: 2});
+
+let FantomKiller = gsap.fromTo(TueurDeFantome, {y: "-30vh", opacity:"0%", rotate:'90deg'}, {y: "0vh", opacity:"100%",duration: 2, rotate:'90deg'});
 
 
 
@@ -233,6 +230,7 @@ const AnimTrigger = ScrollTrigger.create({
   
   animationDirection: "reverse"
 });
+
 
 
 
@@ -288,7 +286,9 @@ const PinTriggerD = ScrollTrigger.create({
   end: () => `+=${chap4.offsetHeight}`, // Fin de l'épinglage = fin du contenu
   pin: true,
   pinSpacing: true,
-  markers: true
+  markers: true,
+  animation: AnimCloud,
+  scrub:true
 });
 const PinTriggerE = ScrollTrigger.create({
   trigger: '#chapitre-5',
@@ -296,7 +296,9 @@ const PinTriggerE = ScrollTrigger.create({
   end: () => `+=${chap5.offsetHeight}`, // Fin de l'épinglage = fin du contenu
   pin: true,
   pinSpacing: true,
-  markers: true
+  markers: true,
+  scrub:true,
+  animation: swordAnim,
 });
 const PinTriggerF = ScrollTrigger.create({
   trigger: '#chapitre-6',
@@ -304,7 +306,9 @@ const PinTriggerF = ScrollTrigger.create({
   end: () => `+=${chap6.offsetHeight}`, // Fin de l'épinglage = fin du contenu
   pin: true,
   pinSpacing: true,
-  markers: true
+  markers: true,
+  animation:JumpAnim,
+  scrub:true
 });
 const PinTriggerG = ScrollTrigger.create({
   trigger: '#chapitre-7',
@@ -312,5 +316,30 @@ const PinTriggerG = ScrollTrigger.create({
   end: () => `+=${chap7.offsetHeight}`, // Fin de l'épinglage = fin du contenu
   pin: true,
   pinSpacing: true,
-  markers: true
+  markers: true,
+  animation: FantomKiller,
+  scrub:true
 });
+//DRAWSVG
+/*
+gsap.set(["#vent"],{drawSVG:"0% 0%"});
+function anim(){
+  gsap.timeline()
+  .fromTo(
+    "#vent",
+    {
+      drawSVG:"0% 0%"
+    },
+    {
+      drawSVG:"0% 100%",
+      duration:1
+    }
+  )
+  .fromTo(["#vent"],
+  {
+    fillOpacity:0
+  },{
+    fillOpacity:1,
+    duration:1
+  });
+}*/
