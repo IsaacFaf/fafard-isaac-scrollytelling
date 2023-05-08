@@ -1,5 +1,14 @@
 
 
+<<<<<<< Updated upstream
+=======
+
+gsap.registerPlugin(ScrollTrigger);
+
+
+
+
+>>>>>>> Stashed changes
 let body = document.querySelector('body')
 //SPRITESHEET
 //Prise 4
@@ -139,9 +148,23 @@ else{
 let swirdArr = document.querySelectorAll("#chapitre-2 img");
 
 //Chap2
-gsap.fromTo(swirdArr, {scaleY: "100%", scaleX: "100%", opacity:"100%" }, { 
-  scaleY: "1%", scaleX: "1%", duration:2.2, repeat:-1,yoyo:true, opacity:"36%"
+const AnimA = gsap.fromTo(swirdArr, {scaleY: "1%", scaleX: "1%"}, { 
+  scaleY: "150%", scaleX: "150%", duration:5.2, yoyo:true,
 });
+
+ // Désactive le trigger du chapitre 3 au départ
+
+
+
+
+
+
+let AnimB;
+
+let AmimC;
+
+
+
 //Chap5
 gsap.timeline().fromTo('#chapitre-5 img.a',{x:'0%', y:"0%"}, 
 {x: '35vw', y:"20vh",rotate:"6deg", duration: 2})
@@ -167,3 +190,83 @@ let TueurDeFantome = document.querySelector('#chapitre-7 div.a')
 console.log(TueurDeFantome);
 gsap.fromTo(TueurDeFantome, {y: "-30vh"}, {y: "0vh", duration: 2});
 
+
+
+
+
+//SCROLLTRIGGER 2.3A
+const AnimTrigger = ScrollTrigger.create({
+  trigger: "#chapitre-2", // élément déclencheur
+  start: "100% -50%", // point de départ de l'animation
+  end: "100% 100%", // point de fin de l'animation
+  scrub: 5.4,
+  animation: AnimA,
+  
+  animationDirection: "reverse"
+});
+
+
+
+const chap1 = document.querySelector('#chapitre-1');
+const chap2 = document.querySelector('#chapitre-2');
+const chap3 = document.querySelector('#chapitre-3');
+const chap4 = document.querySelector('#chapitre-4');
+const chap5 = document.querySelector('#chapitre-5');
+const chap6 = document.querySelector('#chapitre-6');
+const chap7 = document.querySelector('#chapitre-7');
+const PinTriggerA = ScrollTrigger.create({
+  trigger:'#chapitre-1',
+  start: "top top",
+  end: () => `+=${chap2.offsetHeight}`, // Fin de l'épinglage = fin du contenu
+  pin: true,
+  pinSpacing: true,
+  markers: true
+})
+const PinTriggerB = ScrollTrigger.create({
+  trigger: '#chapitre-2',
+  start: "top top",
+  end: () => `+=${chap2.offsetHeight}`, // Fin de l'épinglage = fin du contenu
+  pin: true,
+  pinSpacing: true,
+  markers: true
+});
+const PinTriggerC = ScrollTrigger.create({
+  trigger: '#chapitre-3',
+  start: "top top",
+  end: () => `+=${chap3.offsetHeight}`, // Fin de l'épinglage = fin du contenu
+  pin: true,
+  pinSpacing: true,
+  markers: true
+});
+const PinTriggerD = ScrollTrigger.create({
+  trigger: '#chapitre-4',
+  start: "top top",
+  end: () => `+=${chap4.offsetHeight}`, // Fin de l'épinglage = fin du contenu
+  pin: true,
+  pinSpacing: true,
+  markers: true
+});
+const PinTriggerE = ScrollTrigger.create({
+  trigger: '#chapitre-5',
+  start: "top top",
+  end: () => `+=${chap5.offsetHeight}`, // Fin de l'épinglage = fin du contenu
+  pin: true,
+  pinSpacing: true,
+  markers: true
+});
+const PinTriggerF = ScrollTrigger.create({
+  trigger: '#chapitre-6',
+  start: "top top",
+  end: () => `+=${chap6.offsetHeight}`, // Fin de l'épinglage = fin du contenu
+  pin: true,
+  pinSpacing: true,
+  markers: true
+});
+const PinTriggerG = ScrollTrigger.create({
+  trigger: '#chapitre-7',
+  start: "top top",
+  end: () => `+=${chap7.offsetHeight}`, // Fin de l'épinglage = fin du contenu
+  pin: true,
+  pinSpacing: true,
+  markers: true
+});
