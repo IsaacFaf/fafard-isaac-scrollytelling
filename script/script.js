@@ -1,14 +1,5 @@
 
 
-<<<<<<< Updated upstream
-=======
-
-gsap.registerPlugin(ScrollTrigger);
-
-
-
-
->>>>>>> Stashed changes
 let body = document.querySelector('body')
 //SPRITESHEET
 //Prise 4
