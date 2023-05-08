@@ -1,4 +1,6 @@
 
+gsap.registerPlugin(DrawSVGPlugin);
+
 
 let body = document.querySelector('body')
 //SPRITESHEET
@@ -288,7 +290,9 @@ const PinTriggerD = ScrollTrigger.create({
   pinSpacing: true,
   markers: true,
   animation: AnimCloud,
-  scrub:true
+  scrub:true,
+  
+  
 });
 const PinTriggerE = ScrollTrigger.create({
   trigger: '#chapitre-5',
@@ -321,25 +325,20 @@ const PinTriggerG = ScrollTrigger.create({
   scrub:true
 });
 //DRAWSVG
-/*
-gsap.set(["#vent"],{drawSVG:"0% 0%"});
-function anim(){
-  gsap.timeline()
-  .fromTo(
-    "#vent",
-    {
-      drawSVG:"0% 0%"
-    },
-    {
-      drawSVG:"0% 100%",
-      duration:1
-    }
-  )
-  .fromTo(["#vent"],
-  {
-    fillOpacity:0
-  },{
-    fillOpacity:1,
-    duration:1
-  });
-}*/
+
+gsap.set(["#Calque_3"],{drawSVG:"0% 0%"});
+
+
+
+tl = gsap.timeline({});
+
+let animSvg = tl.fromTo('.st0', {drawSVG:"100% 100%"}, {duration: 10, drawSVG:"0% 100%", stagger: 0.6})
+const PinTriggerDpart = ScrollTrigger.create({
+  trigger: '#chapitre-4',
+  start: "top top",
+  end: () => `+=${chap4.offsetHeight}`,
+  markers: true,
+  animation: animSvg,
+  scrub:true,
+});
+
