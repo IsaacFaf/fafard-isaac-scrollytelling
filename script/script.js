@@ -1,6 +1,6 @@
 
-gsap.registerPlugin(DrawSVGPlugin);
-gsap.registerPlugin(MotionPathPlugin);
+//gsap.registerPlugin(DrawSVGPlugin);
+//gsap.registerPlugin(MotionPathPlugin);
 
 let body = document.querySelector('body')
 //SPRITESHEET
@@ -359,5 +359,5 @@ const PinTriggerDpart = ScrollTrigger.create({
   animation: animSvg,
   scrub:true,
 });
-
+//Apres faut que j'optimise le web
 
