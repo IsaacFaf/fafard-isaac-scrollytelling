@@ -148,7 +148,7 @@ const PinTriggerDpart = ScrollTrigger.create({
   start: "top top",
   end: () => `+=${chap4.offsetHeight}`,
   markers: true,
-  animation: animSvg, //Execution du DrawSVG
+  //animation: animSvg, //Execution du DrawSVG <-----------
   scrub:true,
 });
 
@@ -177,7 +177,7 @@ const Chapitre6 = ScrollTrigger.create({
   pin: true,
   pinSpacing: true,
   markers: true,
-  animation:JumpAnim,// MOTION PATH (IL EST EN BAS, IL Y A UN COMMENTAIRE MOTION PATH À CETTE SECTION)
+  //animation:JumpAnim,// MOTION PATH (IL EST EN BAS, IL Y A UN COMMENTAIRE MOTION PATH À CETTE SECTION) <------------
   scrub:true
 });
 
