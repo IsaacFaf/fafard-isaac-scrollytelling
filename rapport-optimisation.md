@@ -1,5 +1,5 @@
 # Rapport d'optimisation du projet ScrollyTelling
-https://pagespeed.web.dev/analysis/https-isaacfaf-github-io-fafard-isaac-scrollytelling/jcg6n3nr13?form_factor=desktop
+[PageSpeed Insight] https://pagespeed.web.dev/analysis/https-isaacfaf-github-io-fafard-isaac-scrollytelling/jcg6n3nr13?form_factor=desktop Rapport du 12 mai 2023, 01:33:01
 ## Problème #1
 ### Nom du problème
 Petite durée de vie des caches
@@ -22,4 +22,4 @@ Minimiser les scripts et déplacé les codes en balise style du html dans le css
 ### Résultat
 Bien qu'après quelques changements de ma part. Je ne parvient pas à effectuer de changement assez important pour que le problème soit complètement réglé dans le thread principal malheureusement. J'ai diminuer la charge de CSS et essayé de minimiser le code de premier chargement.
 ## Rapport projet ScrollyTelling après optimisation
-https://pagespeed.web.dev/analysis/https-isaacfaf-github-io-fafard-isaac-scrollytelling/8ft408428f?form_factor=desktop 
+[PageSpeed Insight] https://pagespeed.web.dev/analysis/https-isaacfaf-github-io-fafard-isaac-scrollytelling/8ft408428f?form_factor=desktop Rapport du 12 mai 2023. 03:25:22
