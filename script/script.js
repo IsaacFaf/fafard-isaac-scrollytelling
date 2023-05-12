@@ -77,7 +77,7 @@ const Chapitre1 = ScrollTrigger.create({
   end: () => `+=${chap2.offsetHeight}`,//PERMET DE SET LA FIN DU SCROLL A UN MOMENT QUI ME PLAIT. JE RISQUE DE PRENDRE LA MÊME VALEUR POUR CHAQUE CHAPITRE. BOTTOM BOTTOM ME CAUSAIT QUELQUES SOUCIS
   pin: true,
   pinSpacing: true,
-  markers: true,
+  //markers: true,
   scrub:1.2,
   animation:Anim,//ANIMATION APPELÉ
   animationDirection:"reverse",
@@ -106,7 +106,7 @@ const Chapitre2 = ScrollTrigger.create({
   end: () => `+=${chap2.offsetHeight}`, 
   pin: true,
   pinSpacing: true,
-  markers: true,
+  //markers: true,
   animation: AnimA,
 });
 
@@ -118,7 +118,7 @@ const Chapitre3 = ScrollTrigger.create({
   end: () => `+=${chap3.offsetHeight}`, 
   pin: true,
   pinSpacing: true,
-  markers: true,
+  //markers: true,
 });
 
 
@@ -134,7 +134,7 @@ const Chapitre4 = ScrollTrigger.create({
   end: () => `+=${chap4.offsetHeight}`, 
   pin: true,
   pinSpacing: true,
-  markers: true,
+  //markers: true,
   animation: AnimCloud,//ANIMATION APPELÉ
   scrub:true,
 });
@@ -147,7 +147,7 @@ const PinTriggerDpart = ScrollTrigger.create({
   trigger: '#chapitre-4',
   start: "top top",
   end: () => `+=${chap4.offsetHeight}`,
-  markers: true,
+  //markers: true,
   //animation: animSvg, //Execution du DrawSVG <-----------
   scrub:true,
 });
@@ -164,7 +164,7 @@ const Chapitre5 = ScrollTrigger.create({
   end: () => `+=${chap5.offsetHeight}`, 
   pin: true,
   pinSpacing: true,
-  markers: true,
+  //markers: true,
   scrub:true,
   animation: swordAnim,//ANIMATION APPELÉ
 });
@@ -176,7 +176,7 @@ const Chapitre6 = ScrollTrigger.create({
   end: () => `+=${chap6.offsetHeight}`, 
   pin: true,
   pinSpacing: true,
-  markers: true,
+  //markers: true,
   //animation:JumpAnim,// MOTION PATH (IL EST EN BAS, IL Y A UN COMMENTAIRE MOTION PATH À CETTE SECTION) <------------
   scrub:true
 });
@@ -193,7 +193,7 @@ const Chapitre7 = ScrollTrigger.create({
   end: () => `+=${chap7.offsetHeight}`, 
   pin: true,
   pinSpacing: true,
-  markers: true,
+  //markers: true,
   animation: FantomKiller,//ANIMATION APPELÉ
   scrub:true
 });
@@ -249,7 +249,7 @@ const parallax_A = ScrollTrigger.create({//CHACUN DES SCROLLTRIGGERS CONTRÔLENT
   start: "top top",
   end: () => `+=${chap2.offsetHeight}`,
   
-  markers: true,
+  //markers: true,
   scrub:1.2,
   animation:parallaxA,//APPELS DES ANIMATIONS
   animationDirection:"reverse"
@@ -259,7 +259,7 @@ const parallax_B = ScrollTrigger.create({
   trigger:chap1,
   start: "top top",
   end: () => `+=${chap2.offsetHeight}`,
-  markers: true,
+  //markers: true,
   scrub:1.2,
   animation:parallaxB,
   animationDirection:"reverse"
@@ -269,7 +269,7 @@ const parallax_C = ScrollTrigger.create({
   trigger:chap1,
   start: "top top",
   end: () => `+=${chap2.offsetHeight}`,
-  markers: true,
+  //markers: true,
   scrub:1.2,
   animation:parallaxC,
   animationDirection:"reverse"
@@ -280,7 +280,7 @@ const parallax_D = ScrollTrigger.create({
   start: "top top",
   end: () => `+=${chap2.offsetHeight}`,
   
-  markers: true,
+  //markers: true,
   scrub:1.2,
   animation:parallaxD,
   animationDirection:"reverse"
