@@ -202,7 +202,7 @@ const Chapitre7 = ScrollTrigger.create({
 
 
 //MORPHING (CHAPITRE-3)
-let morphing = gsap.to("#Vector-morph", { 
+/*let morphing = gsap.to("#Vector-morph", { 
   morphSVG:"#Katana-morph",
   scrollTrigger:{
     trigger:'#chapitre-3',
@@ -211,10 +211,10 @@ let morphing = gsap.to("#Vector-morph", {
     scrub:true,
     markers:true,
   }
-});
+});*/
 
 //MOTION PATH (CHAPITRE-6)
-let JumpAnim = gsap.to("#chapitre-6 div.a", {
+/*let JumpAnim = gsap.to("#chapitre-6 div.a", {
   motionPath:{
     align:"#ligneSvg",
     path:"#ligneSvg",
@@ -229,7 +229,7 @@ let JumpAnim = gsap.to("#chapitre-6 div.a", {
     trigger:"#chapitre-6 div.a",
     
   }
-});
+});*/
 
 
 //Apres faut que j'optimise le web
