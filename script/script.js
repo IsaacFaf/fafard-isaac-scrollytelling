@@ -1,6 +1,6 @@
 
-//gsap.registerPlugin(DrawSVGPlugin);
-//gsap.registerPlugin(MotionPathPlugin);
+gsap.registerPlugin(DrawSVGPlugin);
+gsap.registerPlugin(MotionPathPlugin);
 
 let body = document.querySelector('body')
 //SPRITESHEET
@@ -148,7 +148,7 @@ const PinTriggerDpart = ScrollTrigger.create({
   start: "top top",
   end: () => `+=${chap4.offsetHeight}`,
   //markers: true,
-  //animation: animSvg, //Execution du DrawSVG <-----------
+  animation: animSvg, //Execution du DrawSVG <-----------
   scrub:true,
 });
 
@@ -170,6 +170,23 @@ const Chapitre5 = ScrollTrigger.create({
 });
 
 //CHAPITRE-6
+//MOTION PATH (CHAPITRE-6)
+let JumpAnim = gsap.to("#chapitre-6 div.a", {
+  motionPath:{
+    align:"#ligneSvg",
+    path:"#ligneSvg",
+    autoRotate:true,
+    alignOrigin:[0.5, 0.5]
+  },
+  scrollTrigger:{
+    scrub:true,
+    markers:true,
+    start: "0% 0%",
+    end:"100% 100%",
+    trigger:"#chapitre-6 div.a",
+    
+  }
+});
 const Chapitre6 = ScrollTrigger.create({
   trigger: '#chapitre-6',
   start: "top top",
@@ -177,7 +194,7 @@ const Chapitre6 = ScrollTrigger.create({
   pin: true,
   pinSpacing: true,
   //markers: true,
-  //animation:JumpAnim,// MOTION PATH (IL EST EN BAS, IL Y A UN COMMENTAIRE MOTION PATH À CETTE SECTION) <------------
+  animation:JumpAnim,// MOTION PATH (IL EST EN BAS, IL Y A UN COMMENTAIRE MOTION PATH À CETTE SECTION) <------------
   scrub:true
 });
 
@@ -202,7 +219,7 @@ const Chapitre7 = ScrollTrigger.create({
 
 
 //MORPHING (CHAPITRE-3)
-/*let morphing = gsap.to("#Vector-morph", { 
+let morphing = gsap.to("#Vector-morph", { 
   morphSVG:"#Katana-morph",
   scrollTrigger:{
     trigger:'#chapitre-3',
@@ -211,25 +228,7 @@ const Chapitre7 = ScrollTrigger.create({
     scrub:true,
     markers:true,
   }
-});*/
-
-//MOTION PATH (CHAPITRE-6)
-/*let JumpAnim = gsap.to("#chapitre-6 div.a", {
-  motionPath:{
-    align:"#ligneSvg",
-    path:"#ligneSvg",
-    autoRotate:true,
-    alignOrigin:[0.5, 0.5]
-  },
-  scrollTrigger:{
-    scrub:true,
-    markers:true,
-    start: "0% 0%",
-    end:"100% 100%",
-    trigger:"#chapitre-6 div.a",
-    
-  }
-});*/
+});
 
 
 //Apres faut que j'optimise le web
