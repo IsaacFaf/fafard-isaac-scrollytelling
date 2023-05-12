@@ -107,7 +107,7 @@ section {
   background-position: center;
   width: 100%;
   height: 100vh;
-  background-image: url(../img/img_arriere_plan/Plandetravail1.png);
+  background-image: url(../img/img_arriere_plan/chp1_fond.png);
 }
 #chapitre-1 p{
   position: absolute;
@@ -373,7 +373,7 @@ top: -20%;
   width: 128px;
   height: 128px;
   background-color: transparent;
-  
+  z-index: 5;
   animation: mymove 2.6s steps(16) infinite;
   animation-play-state: paused;
 }
@@ -445,6 +445,51 @@ body.is-scrolling{
   animation-play-state:running;
 }
 
+
+
+#Katana-morph{
+  visibility:hidden;
+}
+
+#svg2{
+  position: absolute;
+  left: 44vw;
+  width: 50vw;
+  height: 100%;
+}
+
+
+
+
+
+.parallax-1{
+  position: absolute;
+  z-index: 1;
+  top: 21vh;
+  width: 100%;
+  left: 25vw;
+}
+.parallax-2{
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  top: 43vh;
+  left:15vw;
+}
+.parallax-3{
+  position: absolute;
+  z-index: 3;
+  top: 51vh;
+  right: 4vw;
+  width: 100%;
+}
+.parallax-4{
+  position: absolute;
+z-index: 4;
+top: 58.6vh;
+left:auto;
+width: 100%;
+}
 
 /* pour le html test spritesheed
 @keyframes katana {

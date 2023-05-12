@@ -1,6 +1,6 @@
 
-//gsap.registerPlugin(DrawSVGPlugin);
-//gsap.registerPlugin(MotionPathPlugin);
+gsap.registerPlugin(DrawSVGPlugin);
+gsap.registerPlugin(MotionPathPlugin);
 
 let body = document.querySelector('body')
 //SPRITESHEET
@@ -8,40 +8,6 @@ let body = document.querySelector('body')
 let sprite = document.querySelector('.image');
 let scroll = document.querySelector('.is-scrolling');//
 
-/*let Anim = window.addEventListener("scroll", function(){
- body.classList.add('.is-scrolling');
- sprite.style.animationPlayState = 'running';
-  let time = setTimeout(function(){
-    body.classList.remove('.is-scrolling');
-    sprite.style.animationPlayState = 'paused';
-  }, 100);
-})
-
-
-gsap.to(".image", {
-  ScrollTrigger: {
-    trigger:".image",
-    start:"top top",
-    end:"bottom bottom",
-    scrub:true,
-    
-    markers:true,
-    onUpdate: (e) => {
-      Anim.play()
-    }
-  }
-})*/
-
-
-/*const AnimTriggerred = ScrollTrigger.create({
-  trigger:".image",
-  start:"top top",
-  end:"bottom bottom",
-  scrub:true,
-  animation: Anim,
-  markers:true,
-  
-})*/
 
 
 
@@ -55,84 +21,6 @@ window.addEventListener("scroll", function(){
      spriteDeux.style.animationPlayState = 'paused';
    }, 100);
  })
-
-
-
-//Prise 1
-
-/*function sprites(){
-  var sprite = document.querySelector('.image')
-  for (var i = 0; i < sprite.length;i++){
-    var windowHeight = window.innerHeight;
-    var elementTop=sprite[i].getBoundingClientRect().top;
-    var elementVisible = 150;
-    if(elementTop < windowHeight - elementVisible){
-      sprite[i].classList.add("is-scrolling");
-      sprite.style.animationPlayState = 'running';
-    } else {
-      sprite[i].classList.remove("is-scrolling");
-      sprite.style.animationPlayState = 'paused';
-    }
-  }}
-  window.addEventListener("scroll", sprites)*/
-
-//Prise 2
-/*
-let isScrolling; //Déclaration pour le setTimeout
-window.addEventListener('scroll', function() {
-  
-  let sprite = document.querySelector(".image");
-  let spritePos = sprite.getBoundingClientRect().top;
-  let scrollPos = window.innerHeight;
-  
-// au Scroll ajout de class
-  if (spritePos <= scrollPos){
-    
-    sprite.style.animationPlayState = 'running';
-    body.classList.add('.is-scrolling');
-    console.log("Je scroll");
-  } else{
-    
-    sprite.style.animationPlayState = 'paused';
-    body.classList.remove('is-scrolling')
-    console.log("Code éxécuté")
-  }
-  //Variable de temps
-  this.window.clearTimeout(isScrolling); //Annuler le minuteur
-  isScrolling = setTimeout(function(){
-    document.body.classList.remove('is-scrolling');
-    minuteur = "Valeur de ma variable";
-    console.log(minuteur);
-  }, 100);
-}, false);*/
-
-
-
-//Prise 3
-/*
-const img = document.querySelector('.image');
-let timeL = gsap.timeline({
-  scrollTrigger:{
-    trigger:Image,
-    start:'top center+=200',
-    end:'bottom center-=200',
-    onEnter:() =>{
-      document.body.classList.add('is-scrolling');
-      timeL.play();
-    },
-    onLeaveBack: () => {
-      document.body.classList.remove('is-scrolling');
-      timeL.pause();
-    }
-  }
-});
-timeL.to('.image', {backgroundPositionX:'-4096', duration:0.2, repeat:-1})
-
-*/
-
-//TimeLine
-
-
 
 
 
@@ -197,8 +85,6 @@ let swordAnim = gsap.timeline().fromTo('#chapitre-5 img.a',{x:'0%', y:"0%"}, 
 
 
 
-//let JumpAnim = gsap.timeline().fromTo('#chapitre-6 div.a', {x:'-15vw', y:"-120px",opacity:"0%",ease:'none', duration:0.8},
-//{x: '24.42vw', y:"38vh", rotate:"90deg", duration: 11, opacity:"100%"})
 //Chap6
 let JumpAnim = gsap.to("#chapitre-6 div.a", {
   motionPath:{
@@ -219,21 +105,12 @@ let JumpAnim = gsap.to("#chapitre-6 div.a", {
 
 
 
-/*.to('#chapitre-6 div.a', { x: '-2vw', y:"-10px", rotate:"30deg", duration: 0.95,ease:'none'})
-.to('#chapitre-6 div.a', { x: '5.5vw', y:"55px", rotate:"45deg", duration: 0.88,ease:'none'})
-.to('#chapitre-6 div.a', { x: '10.8vw', y:"108px", rotate:"52deg", duration: 0.86,ease:'none'})
-.to('#chapitre-6 div.a', { x: '15.8vw', y:"188px", rotate:"58deg", duration: 0.82,ease:'none',})
-.to('#chapitre-6 div.a', { x: '17.42vw', y:"213px", rotate:"60deg", duration: 0.8,ease:'none'})
-.to('#chapitre-6 div.a', { x: '17.42vw', y:"163px", rotate:"60deg", duration: 1, opacity:"1%"})*/
+
 //Chap7
 let TueurDeFantome = document.querySelector('#chapitre-7 div.a')
 console.log(TueurDeFantome);
 
 let FantomKiller = gsap.fromTo(TueurDeFantome, {y: "-30vh", opacity:"0%", rotate:'90deg'}, {y: "0vh", opacity:"100%",duration: 2, rotate:'90deg'});
-
-
-
-
 
 //SCROLLTRIGGER 2.3A
 
@@ -261,7 +138,7 @@ const chap4 = document.querySelector('#chapitre-4');
 const chap5 = document.querySelector('#chapitre-5');
 const chap6 = document.querySelector('#chapitre-6');
 const chap7 = document.querySelector('#chapitre-7');
-const PinTriggerA = ScrollTrigger.create({
+const Chapitre1 = ScrollTrigger.create({
   trigger:chap1,
   start: "top top",
   end: () => `+=${chap2.offsetHeight}`,
@@ -283,73 +160,36 @@ const PinTriggerA = ScrollTrigger.create({
   animation:Anim,
   animationDirection:"reverse"
   
-})
-const PinTriggerB = ScrollTrigger.create({
+});
+const Chapitre2 = ScrollTrigger.create({
   trigger: '#chapitre-2',
   start: "top top",
-  end: () => `+=${chap2.offsetHeight}`, // Fin de l'épinglage = fin du contenu
+  end: () => `+=${chap2.offsetHeight}`, 
   pin: true,
   pinSpacing: true,
   markers: true
 });
-const PinTriggerC = ScrollTrigger.create({
+const Chapitre3 = ScrollTrigger.create({
   trigger: '#chapitre-3',
   start: "top top",
-  end: () => `+=${chap3.offsetHeight}`, // Fin de l'épinglage = fin du contenu
+  end: () => `+=${chap3.offsetHeight}`, 
   pin: true,
   pinSpacing: true,
-  markers: true
+  markers: true,
+ 
 });
-const PinTriggerD = ScrollTrigger.create({
+const Chapitre4 = ScrollTrigger.create({
   trigger: '#chapitre-4',
   start: "top top",
-  end: () => `+=${chap4.offsetHeight}`, // Fin de l'épinglage = fin du contenu
+  end: () => `+=${chap4.offsetHeight}`, 
   pin: true,
   pinSpacing: true,
   markers: true,
   animation: AnimCloud,
   scrub:true,
-  
-  
 });
-const PinTriggerE = ScrollTrigger.create({
-  trigger: '#chapitre-5',
-  start: "top top",
-  end: () => `+=${chap5.offsetHeight}`, // Fin de l'épinglage = fin du contenu
-  pin: true,
-  pinSpacing: true,
-  markers: true,
-  scrub:true,
-  animation: swordAnim,
-});
-const PinTriggerF = ScrollTrigger.create({
-  trigger: '#chapitre-6',
-  start: "top top",
-  end: () => `+=${chap6.offsetHeight}`, // Fin de l'épinglage = fin du contenu
-  pin: true,
-  pinSpacing: true,
-  markers: true,
-  animation:JumpAnim,
-  scrub:true
-});
-const PinTriggerG = ScrollTrigger.create({
-  trigger: '#chapitre-7',
-  start: "top top",
-  end: () => `+=${chap7.offsetHeight}`, // Fin de l'épinglage = fin du contenu
-  pin: true,
-  pinSpacing: true,
-  markers: true,
-  animation: FantomKiller,
-  scrub:true
-});
-//DRAWSVG
-
 gsap.set(["#Calque_3"],{drawSVG:"0% 0%"});
-
-
-
 tl = gsap.timeline({});
-
 let animSvg = tl.fromTo('.st0', {drawSVG:"100% 100%"}, {duration: 10, drawSVG:"0% 100%", stagger: 0.6})
 const PinTriggerDpart = ScrollTrigger.create({
   trigger: '#chapitre-4',
@@ -359,5 +199,100 @@ const PinTriggerDpart = ScrollTrigger.create({
   animation: animSvg,
   scrub:true,
 });
+const Chapitre5 = ScrollTrigger.create({
+  trigger: '#chapitre-5',
+  start: "top top",
+  end: () => `+=${chap5.offsetHeight}`, 
+  pin: true,
+  pinSpacing: true,
+  markers: true,
+  scrub:true,
+  animation: swordAnim,
+});
+const Chapitre6 = ScrollTrigger.create({
+  trigger: '#chapitre-6',
+  start: "top top",
+  end: () => `+=${chap6.offsetHeight}`, 
+  pin: true,
+  pinSpacing: true,
+  markers: true,
+  animation:JumpAnim,
+  scrub:true
+});
+const Chapitre7 = ScrollTrigger.create({
+  trigger: '#chapitre-7',
+  start: "top top",
+  end: () => `+=${chap7.offsetHeight}`, 
+  pin: true,
+  pinSpacing: true,
+  markers: true,
+  animation: FantomKiller,
+  scrub:true
+});
+//DRAWSVG
+let morphing = gsap.to("#Vector-morph", { 
+  morphSVG:"#Katana-morph",
+  scrollTrigger:{
+    trigger:'#chapitre-3',
+    start:"top top",
+    end:()=>`+=${chap3.offsetHeight}`,
+    scrub:true,
+    markers:true,
+  }
+});
+
+
+
+
 //Apres faut que j'optimise le web
 
+
+let parallaxA = gsap.fromTo(".parallax-1", {y: "1vh", x:"25vw"}, { y:"-4.5vh", x:"5vw", duration:2});
+let parallaxB = gsap.fromTo(".parallax-2", {y:"-1vh", x:"25vw"}, {y:"-6.5vh", x:"17.8vw", duration:2})
+let parallaxC = gsap.fromTo(".parallax-3", {y:"1vh", x:"-25vw"}, {y:"-3.2vh", x:"-10vw", duration:2})
+let parallaxD = gsap.fromTo(".parallax-4", {y:"0vh", x:"9.5vw"}, {y:"-0.2vh", x:"9vw", duration:2})
+
+
+
+const parallax_A = ScrollTrigger.create({
+  trigger:chap1,
+  start: "top top",
+  end: () => `+=${chap2.offsetHeight}`,
+  
+  markers: true,
+  scrub:1.2,
+  animation:parallaxA,
+  animationDirection:"reverse"
+  
+});
+const parallax_B = ScrollTrigger.create({
+  trigger:chap1,
+  start: "top top",
+  end: () => `+=${chap2.offsetHeight}`,
+  markers: true,
+  scrub:1.2,
+  animation:parallaxB,
+  animationDirection:"reverse"
+  
+});
+const parallax_C = ScrollTrigger.create({
+  trigger:chap1,
+  start: "top top",
+  end: () => `+=${chap2.offsetHeight}`,
+  markers: true,
+  scrub:1.2,
+  animation:parallaxC,
+  animationDirection:"reverse"
+  
+});
+const parallax_D = ScrollTrigger.create({
+  trigger:chap1,
+  start: "top top",
+  end: () => `+=${chap2.offsetHeight}`,
+  
+  markers: true,
+  scrub:1.2,
+  animation:parallaxD,
+  animationDirection:"reverse"
+  
+});
