@@ -21,3 +21,5 @@ Le thread principal est surchargé
 Minimiser les scripts et déplacé les codes en balise style du html dans le css. 
 ### Résultat
 Bien qu'après quelques changements de ma part. Je ne parvient pas à effectuer de changement assez important pour que le problème soit complètement réglé dans le thread principal malheureusement. J'ai diminuer la charge de CSS et essayé de minimiser le code de premier chargement.
+## Rapport projet ScrollyTelling après optimisation
+https://pagespeed.web.dev/analysis/https-isaacfaf-github-io-fafard-isaac-scrollytelling/8ft408428f?form_factor=desktop 
