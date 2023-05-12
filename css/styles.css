@@ -6,6 +6,15 @@
   --bleu: #258ea3;
 }
 
+#scroll-down {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  font-weight: bold;
+}
+
 ul.technique-gsap{
   background: rgba(0,0,0,0.3);
   color: white;
@@ -45,10 +54,9 @@ header {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 100vh;
   background-color: transparent;
   margin:0;
-  padding:0;
+  
 }
 header p{
   position: absolute;
@@ -60,11 +68,9 @@ header p{
 left: 50%;
 transform: translate(-50%, -50%);
 color: var(--vertpale);
-  
 }
 header span{
   position: absolute;
-  
   text-align: center;
   font-weight: bolder;
   top: 41%;
@@ -83,14 +89,12 @@ h1 {
 
 .container {
   position: absolute;
-  height: 100%;
   width: 100%;
   top:115px;
   left:0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
   z-index: 1;
   font-size: 2vw;
@@ -115,7 +119,7 @@ section {
 #chapitre-1{
   position: relative;
   background-size: cover;
-  background-position: center;
+  
   width: 100%;
   height: 100vh;
   background-image: url(../img/img_arriere_plan/chp1_fond.png);
@@ -152,9 +156,6 @@ section {
   left:34vw;  
   max-width: 115px;
   top: 15%;
-  
-  
-  
 /* GSAP en margin ici */
 }
 #chapitre-2 img.b{
@@ -177,7 +178,6 @@ width: 4.75vw;
 rotate: 1deg;
 max-width: 115px;
 top: -20%;
-
 /* GSAP en margin ici */
 }
 
@@ -190,7 +190,6 @@ top: -20%;
   background-position: center;
   width: 100%;
   height: 100vh;
-  
 }
 #chapitre-3 p{
   position: absolute;
@@ -240,11 +239,9 @@ top: -20%;
 
 @keyframes mamv {
   0%{
-    
     background-position-x: 0;
   }
   100%{
-    
     background-position-x:-7680px;
   }
 }
@@ -258,7 +255,6 @@ top: -20%;
   color: white;
   z-index: 0;
   opacity: 95%;
-  
 }
 #chapitre-5 p{
   position: absolute;
@@ -270,7 +266,6 @@ top: -20%;
 #chapitre-5 .mask{
   position: absolute;
   background: white;
-  
   width: 92.5vw;
   height: 100vh;
   opacity: 6.5%;
@@ -279,10 +274,8 @@ top: -20%;
   width: 50vw;
   z-index: 1;
   height: 50vh;
-  
   border-radius: 100%;
   opacity: 10;
-  
 }
 #chapitre-6{
   position: relative;
@@ -343,14 +336,10 @@ top: -20%;
     background-size: cover;
     width: 256px;
     height: 256px;
-    
-    
     background-color: transparent;
     animation: action 1s steps(30) infinite;
     animation-play-state: running; 
    left: 47%;
-
-    
   }
 
 @keyframes action{
@@ -427,19 +416,11 @@ top: -20%;
 }
 
 #ligneSvg{
-  
-
   opacity: 0%;
-  
 }
 
-
 .is-scrolling .image{
-  
-  
-  
-  animation-play-state: running;
-  
+  animation-play-state: running;  
 }
 @keyframes mymove {
   0%{
