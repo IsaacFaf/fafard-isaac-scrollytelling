@@ -34,8 +34,20 @@
 <body>
     <header>
         <!-- <h1><a href="spritesheet_test.html">TEST SPRITESHEET</a></h1> -->
+        <ul class="technique-gsap"> 
+          <li>gsap timeline [appel-à-action]</li>
+          
+          <ul>
+            <li>repeat:-1</li>
+            <li>scale & opacity</li>
+            <li>yoyo=true</li>
+            <li>onUpdate -> classList scroll-down</li>
+            <li>if class scroll-down exist; opacity:0%</li>
+            <li>trigger=</li>
+          </ul>
+        </ul>
         <p>
-          <h1>Colada</h1>
+          <h1>Katana</h1>
                 <p>Projet créé dans le cadre du cours Optimisation Web - Intégration multimédia <br>- Collège Montmorency. © 2023 - Conception : Isaac Fafard et Mikaël Tourangeau <br>Développement Web : Isaac Fafard.</p>
                 <div class="scroll-down">
                   <i class="fas fa-chevron-down"></i>
@@ -53,6 +65,19 @@
         
         <section id="chapitre-1"><!--Plusieurs sections correspondant aux chapitres-->
           <div class="container">
+            <ul class="technique-gsap"> 
+              <li>Effet Parallax pour les montagnes et collines au SCROLL</li> 
+              <li>Sprite Sheet avec l'ajout de la class ".is-scrolling" au SCROLL</li> 
+              <li>scrollTrigger 
+                  <ul> 
+                      <li>trigger= #chapitre-1</li> 
+                      <li>Scale X et Y sur le personnage</li> 
+                      <li>gsap X et Y pour mouvement personnage</li>
+                  </ul> 
+              </li> 
+          </ul> 
+
+
           <div class="image" id="Marche"></div>
           <img src="img/img_arriere_plan/chp1_montagne.png" alt="montagne" class="parallax-1">
           <img src="img/img_arriere_plan/chp1_coll3.png" alt="colline3" class="parallax-2">
@@ -65,6 +90,20 @@
 
         <section id="chapitre-2"><!--Plusieurs sections correspondant aux chapitres-->
           <div class="container">
+            <ul class="technique-gsap"> 
+              
+              <li>animation en continue après activation</li> 
+              <li>scrollTrigger 
+                  <ul> 
+                      <li>trigger=#chapitre-2</li> 
+                      <li>gsap Scale</li> 
+                      <li>repeat -1</li> 
+                      <li>yoyo = true</li> 
+                  </ul> 
+              </li> 
+          </ul> 
+
+
           <img src="img/img_elements_visuels/dague.svg" alt="dague" class="a">
           <img src="img/img_elements_visuels/epee.svg" alt="epee" class="b">
           <img src="img/img_elements_visuels/katana.svg" alt="katana" class="c">
@@ -72,7 +111,16 @@
         </div>
         </section>
 
-        <section id="chapitre-3"><!--Plusieurs sections correspondant aux chapitres-->
+        <section id="chapitre-3">
+          <ul class="technique-gsap"> 
+            <li>morphing: Épée -> Katana</li> 
+            <li>scrub = auto</li> 
+            <li>scrollTrigger 
+                <ul> 
+                    <li>trigger=#chapitre-3</li> 
+                </ul> 
+            </li> 
+        </ul> 
           <svg id="svg2" viewBox="9 80 800 400" style="enable-background:new 9 80 800 400;">
             <style type="text/css">
               .st1{fill:#CCCCCC;}
@@ -85,7 +133,23 @@
           <p>Au moment de s'y rapprocher, un phénomène étrange survient.<br> Les épées réagissent ensemble et forme une belle grosse épée lors de la fusion.</p>
         </section>
 
-        <section id="chapitre-4"><!--Plusieurs sections correspondant aux chapitres-->
+        <section id="chapitre-4">
+          <ul class="technique-gsap"> 
+            <li>drawSVG</li> 
+            <ul>
+              <li>SVG de vent dessiner au scroll</li>
+              
+            </ul>
+            <li>Sprite Sheet</li>
+            <li>scrollTrigger 
+                <ul> 
+                    <li>trigger=#chapitre-4</li> 
+                    <li>drawSVG</li> 
+                    <li>gsap timeline nuage translation X</li>
+                    <li>Sprite sheet responsive [.is-scrolling]</li>
+                </ul> 
+            </li> 
+        </ul> 
           <div class="a"></div>
           <p>Michel étonné par ce phénomène qu'il n'avait jamais entendu parlé dans la légende du Katana, prît peur et prenas du temps pour réfléchir a de meilleures solutions de vaincre le fantome.<br> La seule solution qui semblait possible était cette épée même s'il n'avait pas confiance en elle.</p>
           <div class="nuageA" id="cloud"></div>
@@ -114,14 +178,40 @@
        </svg>
         </section>
 
-        <section id="chapitre-5"><!--Plusieurs sections correspondant aux chapitres-->
+        <section id="chapitre-5">
+          <ul class="technique-gsap"> 
+            <li>svg Katana</li> 
+            <li>ajout d'un fond blanc transparant [luminositée]</li> 
+            <li>scrollTrigger 
+                <ul> 
+                    <li>trigger=#chapitre-5</li> 
+                    <li>gsap timeline rotate pour épée</li> 
+                </ul> 
+            </li> 
+        </ul> 
           <img src="img/img_elements_visuels/whiteScreen.PNG" class="mask" alt="">
           <img src="img/img_elements_visuels/katana.svg" alt="a" class="a">
           
           <p>En retournant dans la grotte, l'arme s'agitait dans tous les sens à la recherche d'un aventurier pour la manier.!<br> Michel est maintenant convaincue que cette arme suffira à combattre le fantome.</p>
         </section>
 
-        <section id="chapitre-6"><!--Plusieurs sections correspondant aux chapitres-->
+        <section id="chapitre-6">
+          <ul class="technique-gsap"> 
+            <li>Sprite Sheet en continue</li> 
+            <li>motionPath</li> 
+            <ul>
+              <li>SVG d'une courbe invisible</li>
+              <li>path: #ligneSvg</li>
+              <li>autorotate = true</li>
+              <li>trigger: #chapitre-6 div.a</li>
+            </ul>
+            <li>scrollTrigger 
+                <ul> 
+                    <li>trigger=#chapitre-6 </li> 
+                    
+                </ul> 
+            </li> 
+        </ul> 
           <div class="a"></div>
           <p>Il s'élança avec l'arme à la main à la recherche de ce maudit fantome. <br>Il suivi ces traces des endroits où il a été auparavant aperçu</p>
           <svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 207.16 184.8">
@@ -141,13 +231,26 @@
           </svg>
         </section>
 
-        <section id="chapitre-7"><!--Plusieurs sections correspondant aux chapitres-->
+        <section id="chapitre-7">
+          <ul class="technique-gsap"> 
+            <li>Sprite Sheet en continue</li> 
+<li>gsap timeline fromTo [opacity, y]</li>
+            <li>scrollTrigger 
+                <ul> 
+                    <li>trigger= #chapitre-7</li> 
+                    <li>scrub = true</li> 
+                </ul> 
+            </li> 
+        </ul> 
           <div class="a"></div>
           <div class="fantome"></div>
           <p>Au moment de le trouver, il en fit qu'un coup de lame que c'était fini. <br>Cette épée était à la hauteur des attentes du village.</p>
         </section>
 
-        <section id="chapitre-8"><!--Plusieurs sections correspondant aux chapitres-->
+        <section id="chapitre-8">
+          <ul class="technique-gsap"> 
+            <li>Page sans effets</li> 
+          </ul>
           <p>fin</p>
         </section>
 
