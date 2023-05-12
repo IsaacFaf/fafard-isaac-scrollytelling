@@ -227,7 +227,7 @@ top: -20%;
   top: 72%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: url(../img/img_personnages/spritesheetmeditation_katana-boy.png);
+  background-image: url(../img/img_personnages/spritesheetmeditation_katana-boy.webp);
   background-position: 0 0;
   background-size: cover;
   width: 256px;
@@ -296,7 +296,7 @@ top: -20%;
   position: absolute;
   top: 100px;
   left: 45%;
-  background-image: url(../img/img_personnages/spritesheettue_fantome.png);
+  background-image: url(../img/img_personnages/spritesheettue_fantome.webp);
   background-position: 0 0;
   background-size: cover;
   width: 256px;
@@ -321,7 +321,7 @@ top: -20%;
 }
 #chapitre-7 div.fantome{
   position: absolute;
-  background-image: url(../img/img_personnages/fantome.png);
+  background-image: url(../img/img_personnages/fantome.webp);
   background-size: cover;
   background-position: center;
   width: 64px;
@@ -331,7 +331,7 @@ top: -20%;
 }
 #chapitre-7 div.a{
   position: absolute;
-    background-image: url(../img/img_personnages/spritesheettue_fantome.png);
+    background-image: url(../img/img_personnages/spritesheettue_fantome.webp);
     background-position: 0 0;
     background-size: cover;
     width: 256px;
@@ -367,7 +367,7 @@ top: -20%;
   position: absolute;
   top: 65vh;
   left: -5.5vw;
-  background-image: url(../img/img_personnages/spritesheet_marche_katana-boy.png);
+  background-image: url(../img/img_personnages/spritesheet_marche_katana-boy.webp);
   background-position: 0 0;
   background-size: cover;
   width: 128px;
